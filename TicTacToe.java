@@ -64,6 +64,12 @@ public class TicTacToe {
                         JButton tile = (JButton) e.getSource();
                         if (tile.getText() == ""){
                             tile.setText(currentPlayer);
+                            if(currentPlayer == "X"){
+                                tile.setForeground(Color.red);
+                            }
+                            else{
+                                tile.setForeground(Color.yellow);
+                            }
                             deque.add(tile);        //adding the current player into deque
                             checkWinner();
                             if(!gameOver){
